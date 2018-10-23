@@ -10,6 +10,10 @@
   </head>
 
   <body>
+      <% if flash[:notice] || flash[:alert] || flash[:danger] %>
+        
+        <%=render "layouts/flashes"  %>
+      <% end %>
     <%= yield %>
   </body>
 </html>

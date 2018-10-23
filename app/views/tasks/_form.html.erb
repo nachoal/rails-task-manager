@@ -1,0 +1,18 @@
+<%= form_for(@task) do |f| %>
+  <fieldset>
+    <ol>
+      <li>
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true %>
+      </li>
+      <li>
+        <%= f.label :details %>
+        <%= f.text_field :details %>
+      </li>
+      <p>
+        <%= f.submit %>
+        <%= link_to "Cancel", tasks_path, class: 'button' %>
+      </p>
+    </ol>
+  </fieldset>
+  <% end %>
